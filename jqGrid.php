@@ -576,7 +576,7 @@ class Grid
 		{
 		    $this->_pgInput = $pgInput;
 
-		    return this;
+	    return $this;
 		}
 
        /**
@@ -607,7 +607,7 @@ class Grid
 				throw new Exception('setRecordPos not valid');
 			}
 
-			$this->_recordPos = recordPos;
+		$this->_recordPos = $recordPos;
 
 		    return $this;
 		}
@@ -624,7 +624,7 @@ class Grid
 		*/
 		public function setRecordText($recordText)
 		{
-		    $this->_recordText = recordText;
+	    $this->_recordText = $recordText;
 
 		    return $this;
 		}
@@ -654,7 +654,7 @@ class Grid
 				*/
 		public function setResizeClass($resizeClass)
 		{
-		    $this->_resizeClass = resizeClass;
+	    $this->_resizeClass = $resizeClass;
 		    return $this;
 		}
 
@@ -798,7 +798,7 @@ class Grid
 				throw new Exception('scrollOffset not valid, not a digit');
 			}
 
-		    $this->_scrollOffset = scrollOffset;
+	    $this->_scrollOffset = $scrollOffset;
 
 		    return $this;
 		}
@@ -1703,7 +1703,7 @@ class Grid
 
 	    // Create table which is used to render grid
 	    $Table = '';
-	    $Table .= '<table id="' . $this->_id . '"></table>';
+	    $Table .= '<table id="' . $this->_id . '"><tr><td /></tr></table>';
 
 	    // Create pager element if is set
 	    $Pager = '';
@@ -1882,7 +1882,7 @@ class Column
 	* @param array $formatOptions format options
 	* @return Column
 	*/
-	public function setFormatter($formatter, $formatOptions = null)
+	public function setFormatter($formatter, array $formatOptions = null)
 	{
 		if ($this->_customFormatter)
 	    {
