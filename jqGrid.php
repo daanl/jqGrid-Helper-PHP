@@ -1736,7 +1736,7 @@ class Grid
                 $output .= "{$eventName}: {$event}, \n";
             } else {
                 $params = implode($params, ", ");
-                $output .= "{$eventName}: function({$params}) { {$event} }, \n";
+                $output .= "on".ucfirst($eventName).": function({$params}) { {$event} }, \n";
             }
         }
 
